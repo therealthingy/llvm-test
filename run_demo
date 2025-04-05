@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+rm -r build-llvm_*
+
+set -x
+
+echo $PATH
+
+uname -smr
+cmake --version | sed -n 1p
+ninja --version
+
+cmake --workflow --preset llvm_makefiles_scan
+cmake --workflow --preset llvm_ninja_noscan
+cmake --workflow --preset llvm_ninja_scan
