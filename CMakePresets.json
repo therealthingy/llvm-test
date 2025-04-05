@@ -7,9 +7,9 @@
     },
     "configurePresets": [
         {
-            "name": "llvm_ninja_scan",
-            "displayName": "LLVM + Ninja + Scan",
-            "binaryDir": "${sourceDir}/build-llvm_ninja_scan/",
+            "name": "llvm20",
+            "displayName": "LLVM-20 + Ninja + Scan",
+            "binaryDir": "${sourceDir}/build-llvm20/",
             "generator": "Ninja",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
@@ -17,84 +17,54 @@
             }
         },
         {
-            "name": "llvm_ninja_noscan",
-            "displayName": "LLVM + Unix Makefiles + NO Scan",
-            "binaryDir": "${sourceDir}/build-llvm_ninja_noscan/",
+            "name": "llvm19",
+            "displayName": "LLVM-19 + Ninja + Scan",
+            "binaryDir": "${sourceDir}/build-llvm19/",
             "generator": "Ninja",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_CXX_SCAN_FOR_MODULES": "0",
-                "CMAKE_CXX_COMPILER": "clang++"
-            }
-        },
-        {
-            "name": "llvm_makefiles_scan",
-            "displayName": "LLVM + Unix Makefiles + Scan",
-            "binaryDir": "${sourceDir}/build-llvm_makefiles_scan/",
-            "generator": "Unix Makefiles",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_CXX_COMPILER": "clang++"
+                "CMAKE_CXX_COMPILER": "/opt/homebrew/Cellar/llvm@19/19.1.7/bin/clang++"
             }
         }
     ],
     "buildPresets": [
         {
-            "name": "llvm_ninja_scan",
-            "displayName": "LLVM + Ninja + Scan",
-            "configurePreset": "llvm_ninja_scan"
+            "name": "llvm20",
+            "displayName": "LLVM-20 + Ninja + Scan",
+            "configurePreset": "llvm20"
         },
         {
-            "name": "llvm_ninja_noscan",
-            "displayName": "LLVM + Ninja + NO Scan",
-            "configurePreset": "llvm_ninja_noscan"
-        },
-        {
-            "name": "llvm_makefiles_scan",
-            "displayName": "LLVM + Unix Makefiles + Scan",
-            "configurePreset": "llvm_makefiles_scan"
+            "name": "llvm19",
+            "displayName": "LLVM-19 + Ninja + Scan",
+            "configurePreset": "llvm19"
         }
     ],
     "workflowPresets": [
         {
-            "name": "llvm_ninja_scan",
-            "description": "LLVM + Ninja + Scan",
+            "name": "llvm20",
+            "description": "LLVM-20 + Ninja + Scan",
             "steps": [
                 {
                     "type": "configure",
-                    "name": "llvm_ninja_scan"
+                    "name": "llvm20"
                 },
                 {
                     "type": "build",
-                    "name": "llvm_ninja_scan"
+                    "name": "llvm20"
                 }
             ]
         },
         {
-            "name": "llvm_ninja_noscan",
-            "description": "LLVM + Ninja + NO Scan",
+            "name": "llvm19",
+            "description": "LLVM-19 + Ninja + Scan",
             "steps": [
                 {
                     "type": "configure",
-                    "name": "llvm_ninja_noscan"
+                    "name": "llvm19"
                 },
                 {
                     "type": "build",
-                    "name": "llvm_ninja_noscan"
-                }
-            ]
-        },
-        {
-            "name": "llvm_makefiles_scan",
-            "description": "LLVM + Unix Makefiles + Scan",
-            "steps": [
-                {
-                    "type": "configure",
-                    "name": "llvm_makefiles_scan"
-                },
-                {
-                    "type": "build",
-                    "name": "llvm_makefiles_scan"
+                    "name": "llvm19"
                 }
             ]
         }
