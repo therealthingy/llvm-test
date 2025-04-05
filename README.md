@@ -1,7 +1,7 @@
 ```shell
 ❯ ./run_demo
-+ echo /Users/gg/.cargo/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Little Snitch.app/Contents/Components:/usr/local/opt/binutils/bin:/Applications/Tools/Virtualization/VMware Fusion.app/Contents/Public:/Users/gg/.local/bin
-/Users/gg/.cargo/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Little Snitch.app/Contents/Components:/usr/local/opt/binutils/bin:/Applications/Tools/Virtualization/VMware Fusion.app/Contents/Public:/Users/gg/.local/bin
++ echo /Users/gg/.cargo/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Little Snitch.app/Contents/Components:/usr/local/opt/binutils/bin:/Applications/Tools/Virtualization/VMware Fusion.app/Contents/Public:/Applications/Development/iTerm.app/Contents/Resources/utilities:/Users/gg/.local/bin
+/Users/gg/.cargo/bin:/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Little Snitch.app/Contents/Components:/usr/local/opt/binutils/bin:/Applications/Tools/Virtualization/VMware Fusion.app/Contents/Public:/Applications/Development/iTerm.app/Contents/Resources/utilities:/Users/gg/.local/bin
 + uname -smr
 Darwin 24.4.0 arm64
 + cmake --version
@@ -18,7 +18,7 @@ Executing workflow step 1 of 2: configure preset "llvm_makefiles_scan"
 -- Check for working CXX compiler: /opt/homebrew/opt/llvm/bin/clang++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (0.5s)
+-- Configuring done (0.4s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/gg/Downloads/llvm-test/build-llvm_makefiles_scan
 
@@ -63,12 +63,8 @@ FAILED: CMakeFiles/test.dir/test.cpp.o.ddi
 "/opt/homebrew/Cellar/llvm/20.1.1/bin/clang-scan-deps" -format=p1689 -- /opt/homebrew/opt/llvm/bin/clang++   -g -std=gnu++23 -arch arm64 -x c++ /Users/gg/Downloads/llvm-test/test.cpp -c -o CMakeFiles/test.dir/test.cpp.o -resource-dir "/opt/homebrew/Cellar/llvm/20.1.1/lib/clang/20" -MT CMakeFiles/test.dir/test.cpp.o.ddi -MD -MF CMakeFiles/test.dir/test.cpp.o.ddi.d > CMakeFiles/test.dir/test.cpp.o.ddi.tmp && mv CMakeFiles/test.dir/test.cpp.o.ddi.tmp CMakeFiles/test.dir/test.cpp.o.ddi
 Error while scanning dependencies for /Users/gg/Downloads/llvm-test/test.cpp:
 In file included from /Users/gg/Downloads/llvm-test/test.cpp:1:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/print:46:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/format:202:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__format/container_adaptor.h:20:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__format/range_default_formatter.h:23:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__format/range_formatter.h:23:
-In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__format/format_context.h:28:
+In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/iostream:45:
+In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/ios:223:
 In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__locale:14:
 In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__locale_dir/locale_base_api.h:115:
 In file included from /opt/homebrew/opt/llvm/bin/../include/c++/v1/__locale_dir/support/apple.h:18:
