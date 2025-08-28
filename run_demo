@@ -10,5 +10,5 @@ uname -smr
 cmake --version | sed -n 1p
 ninja --version
 
-cmake --workflow --preset llvm19
-cmake --workflow --preset llvm20
+#cmake --workflow --preset llvm19
+cmake --workflow --preset llvm21

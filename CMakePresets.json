@@ -7,9 +7,9 @@
     },
     "configurePresets": [
         {
-            "name": "llvm20",
-            "displayName": "LLVM-20 + Ninja + Scan",
-            "binaryDir": "${sourceDir}/build-llvm20/",
+            "name": "llvm21",
+            "displayName": "LLVM-21 + Ninja + Scan",
+            "binaryDir": "${sourceDir}/build-llvm21/",
             "generator": "Ninja",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
@@ -29,9 +29,9 @@
     ],
     "buildPresets": [
         {
-            "name": "llvm20",
-            "displayName": "LLVM-20 + Ninja + Scan",
-            "configurePreset": "llvm20"
+            "name": "llvm21",
+            "displayName": "LLVM-21 + Ninja + Scan",
+            "configurePreset": "llvm21"
         },
         {
             "name": "llvm19",
@@ -41,16 +41,16 @@
     ],
     "workflowPresets": [
         {
-            "name": "llvm20",
-            "description": "LLVM-20 + Ninja + Scan",
+            "name": "llvm21",
+            "description": "LLVM-21 + Ninja + Scan",
             "steps": [
                 {
                     "type": "configure",
-                    "name": "llvm20"
+                    "name": "llvm21"
                 },
                 {
                     "type": "build",
-                    "name": "llvm20"
+                    "name": "llvm21"
                 }
             ]
         },
